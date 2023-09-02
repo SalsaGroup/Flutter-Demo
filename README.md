@@ -1,4 +1,4 @@
-# kitchenai_flutter
+# kitchenai
 
 A new Flutter project.
 
