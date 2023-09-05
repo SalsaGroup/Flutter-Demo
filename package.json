@@ -11,7 +11,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "prebuild": "node prebuild.js"
+    "prebuild": "node prebuild.js",
+    "build": "echo 'No build step'"
   },
   "keywords": [],
   "author": "",
