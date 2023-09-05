@@ -7,7 +7,7 @@ let firebaseConfig = {
     apiKey: envVariables.apiKey,
     authDomain: envVariables.authDomain,
     projectId: envVariables.projectID,
-    storageBucket: envVariables.storageBucket
+    storageBucket: envVariables.storageBucket,
     messagingSenderId: envVariables.messagingSenderID,
     appId: envVariables.appID
 };
