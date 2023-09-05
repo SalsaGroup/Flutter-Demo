@@ -63,5 +63,4 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-/build
 assets/.env
