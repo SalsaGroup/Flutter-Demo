@@ -1,0 +1,70 @@
+.
+├── analysis_options.yaml
+├── android
+│   ├── app
+│   │   ├── build.gradle
+│   │   └── src
+│   ├── build.gradle
+│   ├── gradle
+│   │   └── wrapper
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── kitchenai_android.iml
+│   ├── local.properties
+│   └── settings.gradle
+├── Dockerfile
+├── firebase.json
+├── ios
+│   ├── Flutter
+│   │   ├── AppFrameworkInfo.plist
+│   │   ├── Debug.xcconfig
+│   │   └── Release.xcconfig
+│   ├── Runner
+│   │   ├── AppDelegate.swift
+│   │   ├── Assets.xcassets
+│   │   ├── Base.lproj
+│   │   ├── GeneratedPluginRegistrant.h
+│   │   ├── GeneratedPluginRegistrant.m
+│   │   ├── Info.plist
+│   │   └── Runner-Bridging-Header.h
+│   ├── RunnerTests
+│   │   └── RunnerTests.swift
+│   ├── Runner.xcodeproj
+│   │   ├── project.pbxproj
+│   │   ├── project.xcworkspace
+│   │   └── xcshareddata
+│   └── Runner.xcworkspace
+│       ├── contents.xcworkspacedata
+│       └── xcshareddata
+├── kitchenai_flutter.iml
+├── kitchenai.iml
+├── lib
+│   ├── app
+│   │   └── splash_screen.dart
+│   ├── main.dart
+│   └── user_auth
+│       ├── firebase_auth_implementation
+│       └── presentation
+├── package.json
+├── package-lock.json
+├── prebuild.js
+├── pubspec.lock
+├── pubspec.yaml
+├── README.md
+├── scripts
+│   └── tests
+│       └── mocks
+├── server.js
+├── test
+│   └── widget_test.dart
+├── tree.txt
+├── web
+│   ├── favicon.png
+│   ├── icons
+│   │   ├── Icon-192.png
+│   │   ├── Icon-512.png
+│   │   ├── Icon-maskable-192.png
+│   │   └── Icon-maskable-512.png
+│   ├── index.html
+│   └── manifest.json

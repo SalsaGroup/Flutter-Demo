@@ -1,0 +1,6 @@
+package com.example.kitchenai
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}

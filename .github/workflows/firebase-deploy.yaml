@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      apiKey: ${{ secrets.FIREBASE_API_KEY }}
-      authDomain: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
-      projectID: ${{ secrets.FIREBASE_PROJECT_ID }}
-      storageBucket: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
-      messagingSenderID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
-      appId: ${{ secrets.FIREBASE_APP_ID }}
-      measurementID: ${{ secrets.FIREBASE_MEASUREMENT_ID }}
-      FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      apiKey: '${{ secrets.FIREBASE_API_KEY }}'
+      authDomain: '${{ secrets.FIREBASE_AUTH_DOMAIN }}'
+      projectID: '${{ secrets.FIREBASE_PROJECT_ID }}'
+      storageBucket: '${{ secrets.FIREBASE_STORAGE_BUCKET }}'
+      messagingSenderID: '${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}'
+      appId: '${{ secrets.FIREBASE_APP_ID }}'
+      measurementID: '${{ secrets.FIREBASE_MEASUREMENT_ID }}'
+      FIREBASE_PROJECT_ID: '${{ secrets.FIREBASE_PROJECT_ID }}'
+      FIREBASE_TOKEN: '${{ secrets.FIREBASE_TOKEN }}'
 
     steps:
       - name: Checkout Repository
