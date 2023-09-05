@@ -21,9 +21,9 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # Create .env file in assets directory
       - name: Create .env file
         run: |
+          mkdir -p ./assets
           echo "apiKey=${{ secrets.FIREBASE_API_KEY }}" >> ./assets/.env
           echo "authDomain=${{ secrets.FIREBASE_AUTH_DOMAIN }}" >> ./assets/.env
           echo "projectID=${{ secrets.FIREBASE_PROJECT_ID }}" >> ./assets/.env
@@ -31,6 +31,7 @@ jobs:
           echo "messagingSenderID=${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}" >> ./assets/.env
           echo "appId=${{ secrets.FIREBASE_APP_ID }}" >> ./assets/.env
           echo "measurementID=${{ secrets.FIREBASE_MEASUREMENT_ID }}" >> ./assets/.env
+
 
       - name: Build Application
         run: npm run build
