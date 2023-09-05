@@ -9,17 +9,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    env:
-      apiKey: '${{ secrets.FIREBASE_API_KEY }}'
-      authDomain: '${{ secrets.FIREBASE_AUTH_DOMAIN }}'
-      projectID: '${{ secrets.FIREBASE_PROJECT_ID }}'
-      storageBucket: '${{ secrets.FIREBASE_STORAGE_BUCKET }}'
-      messagingSenderID: '${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}'
-      appId: '${{ secrets.FIREBASE_APP_ID }}'
-      measurementID: '${{ secrets.FIREBASE_MEASUREMENT_ID }}'
-      FIREBASE_PROJECT_ID: '${{ secrets.FIREBASE_PROJECT_ID }}'
-      FIREBASE_TOKEN: '${{ secrets.FIREBASE_TOKEN }}'
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -32,10 +21,23 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      # Create .env file in assets directory
+      - name: Create .env file
+        run: |
+          echo "apiKey=${{ secrets.FIREBASE_API_KEY }}" >> ./assets/.env
+          echo "authDomain=${{ secrets.FIREBASE_AUTH_DOMAIN }}" >> ./assets/.env
+          echo "projectID=${{ secrets.FIREBASE_PROJECT_ID }}" >> ./assets/.env
+          echo "storageBucket=${{ secrets.FIREBASE_STORAGE_BUCKET }}" >> ./assets/.env
+          echo "messagingSenderID=${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}" >> ./assets/.env
+          echo "appId=${{ secrets.FIREBASE_APP_ID }}" >> ./assets/.env
+          echo "measurementID=${{ secrets.FIREBASE_MEASUREMENT_ID }}" >> ./assets/.env
+
       - name: Build Application
         run: npm run build
 
       - name: Deploy to Firebase Hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
           npm install -g firebase-tools
           firebase deploy --token $FIREBASE_TOKEN
